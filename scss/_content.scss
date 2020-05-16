@@ -62,12 +62,12 @@
         right: 0;
         bottom: 0;
         transition: opacity $d $f;
-        background: $tr url('../upload/bx-show.svg') no-repeat 50% 50%;
+        background: $tr url('../upload/bx-no-show.svg') no-repeat 50% 50%;
         background-size: 20.2px 14px;
     }
     &:after {
         opacity: 0;
-        background-image: url('../upload/bx-no-show.svg');
+        background-image: url('../upload/bx-show.svg');
     }
     &.active {
         &:before {
@@ -104,6 +104,11 @@
             border-radius: 50%;
             background: $yellow no-repeat 50% 50%;
             background-size: cover;
+            cursor: pointer;
+            transition: all $d $f;
+            &.active {
+                box-shadow: 0 0 0 5px $s;
+            }
         }
     }
 }

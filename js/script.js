@@ -261,6 +261,7 @@ $(document).ready(function(){
                     });
                     $('.upload-file-result').removeClass('upload-file-result-default');
                     $('#modal-file').modal('hide');
+                    $('.upload-list-item-default').removeClass('active');
                 });
             });
 
@@ -313,6 +314,12 @@ $(document).ready(function(){
         submitHandler: function(form) {
             window.location.href = 'all-set.html';
         }
+    });
+
+    $(document).on('click', '.upload-list-item-default', function(event) {
+        event.preventDefault();
+        $('.upload-list-item-default').removeClass('active');
+        $(this).addClass('active');
     });
 
     //------------------------------------------------------------------------//
