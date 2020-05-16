@@ -1,0 +1,14 @@
+/* grid */
+body, html {
+    background: $p;
+    color: $w;
+}
+.main-global {
+    min-height: 100%;
+    overflow: hidden;
+    padding-bottom: $footer;
+}
+.container,
+.container-fluid {
+    max-width: 1012px;
+}

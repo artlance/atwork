@@ -1,0 +1,51 @@
+/* responsive */
+@media (max-width: 767px) {
+    .header-global {
+        margin-bottom: 0;
+    }
+    .content {
+        &-block {
+            padding: 30px 20px;
+        }
+    }
+    .form-row {
+        .form-cell {
+            margin-bottom: 30px;
+        }
+    }
+    .toggle-password {
+        margin-left: 0;
+        left: auto;
+        right: 5px;
+        background: $w;
+    }
+    .input-relative {
+        input.input-text {
+            padding-right: 40px;
+        }
+    }
+    .upload-list {
+        &-item {
+            flex: 0 0 25%;
+            max-height: 25%;
+        }
+    }
+    .login {
+        margin-top: 20px;
+        &-wrap {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+    }
+}
+@media (max-width: 552px) {
+    .upload-list {
+        &-item {
+            flex: 0 0 33.33333%;
+            max-height: 33.33333%;
+        }
+    }
+}

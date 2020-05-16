@@ -1,0 +1,212 @@
+/* content */
+.content {
+    &-block {
+        background: $primary-light;
+        border-radius: 6px;
+        padding: 41px 32px 40px;
+        margin-bottom: 30px;
+    }
+}
+.section {
+    &-header {
+        font-size: 18px;
+        line-height: 1.56;
+        margin-bottom: 31px;
+        h1, h2, h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 0 13px;
+        }
+        p {
+            margin: 0;
+        }
+        & + .section-navigation {
+            padding-top: 23px;
+        }
+    }
+    &-content {
+        margin: 0;
+        &-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 11px;
+            .default {
+                display: block;
+                font-weight: normal;
+                font-size: 16px;
+                padding-top: 4px;
+            }
+        }
+    }
+    &-navigation {
+        text-align: right;
+    }
+}
+.input-relative {
+    position: relative;
+}
+.toggle-password {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 100%;
+    margin-left: 5px;
+    top: 5px;
+    border-radius: 4px;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: opacity $d $f;
+        background: $tr url('../upload/bx-show.svg') no-repeat 50% 50%;
+        background-size: 20.2px 14px;
+    }
+    &:after {
+        opacity: 0;
+        background-image: url('../upload/bx-no-show.svg');
+    }
+    &.active {
+        &:before {
+            opacity: 0;
+        }
+        &:after {
+            opacity: 1;
+        }
+    }
+}
+.wrong-information {
+    margin-top: -24px;
+    margin-bottom: 28px;
+    color: $t;
+    font-size: 14px;
+    a {
+         color: $t;
+         text-decoration: underline;
+    }
+}
+.upload-list {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+    &-item {
+        padding: 0 8px 16px;
+        flex: 0 0 14.2857142857%;
+        max-height: 14.2857142857%;
+        &-default {
+            height: 0;
+            padding-top: 100%;
+            border-radius: 50%;
+            background: $yellow no-repeat 50% 50%;
+            background-size: cover;
+        }
+    }
+}
+.upload-file-result {
+    margin: 0;
+    display: block;
+    height: 0;
+    padding-top: 100%;
+    border-radius: 50%;
+    background: $w no-repeat 50% 50%;
+    background-size: cover;
+    &-default {
+        background-image: url('../upload/bxs-camera-plus.svg');
+        background-size: 44.444px 40px;
+
+    }
+}
+.upload-input {
+    appearance: none;
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+.login {
+    max-width: 480px;
+    margin: 120px auto 0;
+    color: $b;
+    text-align: center;
+    .btn {
+        min-width: 124px;
+    }
+    &-input {
+        margin: 0 auto 24px;
+        max-width: 296px;
+    }
+    &-nav {
+        padding-top: 36px;
+    }
+    &-logo {
+        max-width: 241px;
+        margin: 40px auto 20px;
+        img {
+            display: block;
+        }
+    }
+    input.input-text {
+        border-color: $b;
+        font-size: 12px;
+        padding-left: 20px;
+        &:focus {
+            border-color: $p;
+        }
+    }
+    a {
+        color: $t;
+    }
+    h1 {
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin: 0 0 18px;
+    }
+    h2 {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin: 0 0 48px;
+        &.login-request {
+            font-weight: normal;
+        }
+    }
+    &-wrap {
+        padding: 70px 40px;
+        background: $w;
+        border-radius: 6px;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+    }
+    &-align {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    &-forgot {
+        padding-top: 11px;
+        font-size: 12px;
+        a {
+            text-decoration: underline;
+        }
+    }
+    &-error {
+        color: $red;
+        font-size: 14px;
+        font-style: italic;
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-top: -18px;
+        margin-bottom: 7px;
+    }
+}
+.page-login {
+    .content > .container > .row {
+        min-height: 100vh;
+        align-items: center;
+    }
+}
